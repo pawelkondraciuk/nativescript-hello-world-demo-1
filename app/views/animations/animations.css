@@ -1,0 +1,12 @@
+.css-translation {
+    animation-name: translation;
+    animation-duration: 2;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes translation {
+    from { transform: translateX(0); }
+    50% { transform: translateX(310); }
+    to { transform: translateX(0); }
+}

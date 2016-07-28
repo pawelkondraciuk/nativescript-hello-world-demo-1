@@ -1,0 +1,27 @@
+﻿.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+    margin: 0 20;
+    text-align: center;
+}
+
+.action-image {
+    width: 40;
+    height: 40;
+    margin-right: 10;
+    vertical-align: center;
+}
+
+.action-label {
+    color: #3C5AFD;
+    font-size: 24;
+    font-weight: bold;
+    vertical-align: center;
+}

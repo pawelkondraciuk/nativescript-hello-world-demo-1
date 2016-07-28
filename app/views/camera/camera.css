@@ -1,0 +1,14 @@
+.white TextView {
+    color: white;
+}
+
+.black TextView {
+    color: black;
+}
+
+AbsoluteLayout TextView {
+    width: 100%;
+    left:20; 
+    top:20;
+    background-color: transparent; 
+}

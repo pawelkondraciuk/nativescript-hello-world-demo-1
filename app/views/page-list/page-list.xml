@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+        <ActionBar>
+            <StackLayout orientation="horizontal" horizontalAlignment="center">
+                <Image src="res://icon" class="action-image"></Image>
+                <Label text="Hello world!" class="action-label"></Label>
+          </StackLayout>
+        </ActionBar>
+    </Page.actionBar>
+    <ListView items="{{ pages }}" itemTap="onItemTap">
+        <ListView.itemTemplate>
+            <Label text="{{ name }}" textWrap="true" />
+        </ListView.itemTemplate>
+    </ListView>
+</Page>

@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <Page.actionBar>
+      <ActionBar title="Bindings" icon="">
+          <NavigationButton text="Back" android.systemIcon = "ic_menu_back" tap="goBack"/>
+          <ActionBar.actionItems>
+              <ActionItem icon="" text="Next" tap="goToNextScreen" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+  <GridLayout rows="40, auto, *" columns="auto, *, 40">
+    <Label text="Text" textWrap="true" col="0" row="0" verticalAlignment="center" />
+    <TextField hint="{{ hint }}" text="{{ something }}" col="1" row="0" colSpan="2" />
+
+    <Label text="Font size" col="0" row="1" verticalAlignment="center"/>
+    <Slider minValue="10" maxValue="100" value="{{ fontSize }}" col="1" row="1"/>
+    <Label text="{{ fontSize }}" col="2" row="1" verticalAlignment="center" horizontalAlignment="center"/>
+    
+    <Label text="{{ something }}" textWrap="true" fontSize="{{ fontSize }}" colSpan="2" row="3" />
+  </GridLayout>
+</Page>

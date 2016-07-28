@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <Page.actionBar>
+      <ActionBar title="Intro" icon="">
+          <NavigationButton text="Back" android.systemIcon = "ic_menu_back" tap="goBack"/>
+          <ActionBar.actionItems>
+              <ActionItem icon="" text="Next" tap="goToNextScreen" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+  <StackLayout>
+    <Label text="Tap the button" class="title"/>
+    <Button text="TAP" tap="{{ onTap }}" isEnabled="{{ counter != 0 ? true : false }}" />
+    <Label text="{{ message }}" class="message" textWrap="true"/>
+    <Button text="Next screen" tap="goToNextScreen" visibility="{{ counter == 0 ? 'visible' : 'collapsed' }}" />
+  </StackLayout>
+</Page>

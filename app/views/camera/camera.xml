@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <Page.actionBar>
+      <ActionBar title="Camera" icon="">
+          <NavigationButton text="Back" android.systemIcon = "ic_menu_back" tap="goBack"/>
+          <ActionBar.actionItems>
+              <ActionItem icon="" text="Next" tap="goToNextScreen" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+  <StackLayout>
+    <Button text="Take a photo" tap="takePhoto" />
+    <AbsoluteLayout class="{{ isBlack == true ? 'black' : 'white' }}">
+      <Image src="{{ image }}" horizontalAlignment="center" width="100%"/>
+      <TextView text="{{ topLine }}" editable="false" fontSize="{{ fontSize }}"/>
+    </AbsoluteLayout>
+    <StackLayout visibility="{{ image != null ? 'visible' : 'collapsed' }}">
+      <TextView hint="Text" text="{{ topLine }}" editable="true" />
+      <Slider minValue="10" maxValue="50" value="{{ fontSize }}" />
+      <DockLayout stretchLastChild="true">
+          <Label dock="left" text="Black text"/>
+          <Switch dock="right" checked="{{ isBlack }}" />
+      </DockLayout>
+    </StackLayout>
+  </StackLayout>
+</Page>

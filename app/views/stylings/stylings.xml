@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <Page.actionBar>
+      <ActionBar title="Stylings" icon="" backgroundColor="{{color}}">
+          <NavigationButton text="Back" android.systemIcon = "ic_menu_back" tap="goBack"/>
+          <ActionBar.actionItems>
+              <ActionItem icon="" style="color: white" text="Next" tap="goToNextScreen" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+  <GridLayout rows="70,70,auto" columns="70,70" horizontalAlignment="center" verticalAlignment="center">
+    <Button text="red" row="0" col="0" cssClass="red" tap="{{ setRed }}"/>
+    <Button text="blue" row="0" col="1" cssClass="blue" tap="{{ setBlue }}"/>
+    <Button text="yellow" row="1" col="0" cssClass="yellow" tap="{{ setYellow }}"/>
+    <Button text="green" row="1" col="1" cssClass="green" tap="{{ setGreen }}"/>
+    <Label text="pick a color!" row="2" colSpan="2" horizontalAlignment="center"/>
+  </GridLayout>
+</Page>

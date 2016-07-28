@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:drawer="nativescript-telerik-ui/sidedrawer" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+      <ActionBar title="Animations" icon="">
+          <NavigationButton text="Back" android.systemIcon = "ic_menu_back" tap="goBack"/>
+          <ActionBar.actionItems>
+              <ActionItem icon="" text="Next" tap="goToNextScreen" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+    <StackLayout>
+        <Label text="" height="40" textWrap="true" id="color-animation" />
+        <Image src="res://icon" stretch ="none" id="simple-translation"/>
+        <Button text="Animate" tap="{{ animate }}" />
+        <Image src="res://icon" stretch ="none" class="{{ cssTranslation ? 'css-translation' : '' }}"/>
+        <Button text="Animate CSS" tap="{{ animateCSS }}" />
+    </StackLayout>
+</Page>
